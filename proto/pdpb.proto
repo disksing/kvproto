@@ -245,6 +245,10 @@ message RegionHeartbeatRequest {
     reserved 11;
     // Actually reported time interval
     TimeInterval interval = 12;
+    // Total query count.
+    uint64 query_count = 13;
+    // Sum of query handle time, in ms.
+    uint64 query_handle_time = 14;
 }
 
 message ChangePeer {
@@ -358,6 +362,10 @@ message StoreStats {
     uint64 keys_read = 14;
     // Actually reported time interval
     TimeInterval interval = 15;
+    // Total query count.
+    uint64 query_count = 16;
+    // Sum of query wait time, in ms.
+    uint64 query_wait_time = 17;
 }
 
 message StoreHeartbeatRequest {
